@@ -1,0 +1,54 @@
+{
+  "name": "downlnk",
+  "version": "0.1.0",
+  "description": "A zero-setup download manager that lives in your terminal: videos, music, images and files from YouTube, Instagram, Reddit and anywhere else.",
+  "type": "module",
+  "bin": {
+    "downlnk": "./dist/cli.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx src/index.tsx",
+    "build": "tsup",
+    "postbuild": "node scripts/postbuild.cjs",
+    "start": "node dist/cli.cjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "download-manager",
+    "downloader",
+    "yt-dlp",
+    "gallery-dl",
+    "youtube",
+    "instagram",
+    "reddit",
+    "segmented-download",
+    "idm",
+    "tui",
+    "terminal",
+    "cli",
+    "ink"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "env-paths": "^4.0.0",
+    "ink": "^7.0.5",
+    "react": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "@types/react": "^19.2.17",
+    "ink-testing-library": "^4.0.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}
